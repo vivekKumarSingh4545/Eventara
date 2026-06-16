@@ -232,7 +232,11 @@ const Checkout = () => {
           title: 'Your Eventara Ticket',
           text: 'Here is your ticket!'
         });
-      toast.error('Sharing not supported on this device.');
+      } else {
+        toast.error('Sharing not supported on this device.');
+      }
+    } catch (err) {
+      toast.error('Sharing cancelled or failed.');
     }
   };
   
