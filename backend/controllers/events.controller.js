@@ -190,6 +190,13 @@ const postEvent = asyncHandler(async (req, res) => {
     });
   }
   const user = await User.findById(req.user.id);
+  if (!user) {
+    return res.status(404).json({
+      success: false,
+      message: "User not found. Please log in again.",
+    });
+  }
+
   const event = await Event.create({
     title,
     description,
