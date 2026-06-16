@@ -50,7 +50,7 @@ const register = asyncHandler(async (req, res) => {
     // TODO: Send OTP via email here
     const content = {
         to : user.email,
-        subject : "EventHub OTP Verification",
+        subject : "Eventara OTP Verification",
         html : otpFormat(user.username , otp)
     };
 
@@ -280,7 +280,7 @@ const resendOtp = asyncHandler(async (req, res) => {
 
     const content = {
         to : user.email,
-        subject : "EventHub OTP Verification (Resend)",
+        subject : "Eventara OTP Verification (Resend)",
         html : otpFormat(user.username , otp)
     };
 

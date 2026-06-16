@@ -56,7 +56,7 @@ const Checkout = () => {
       key: import.meta.env.VITE_RAZORPAY_KEY,
       amount: data.amount,
       currency: data.currency,
-      name: "EventHub",
+      name: "Eventara",
       description: "Test Mode",
       order_id: data.id,
       handler: async (response) => {
@@ -139,7 +139,7 @@ const Checkout = () => {
     if (!ticketData) return;
     const doc = new jsPDF({ unit: 'pt', format: 'a4' });
 
-    // EventHub logo as styled text
+    // Eventara logo as styled text
     doc.setFontSize(28);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor('#3b82f6');
@@ -179,10 +179,10 @@ const Checkout = () => {
     // Message
     doc.setFontSize(13);
     doc.setTextColor('#3b82f6');
-    doc.text('Enjoy your show! Please arrive 15 minutes early. For support, contact EventHub.', 40, y + 30);
+    doc.text('Enjoy your show! Please arrive 15 minutes early. For support, contact Eventara.', 40, y + 30);
 
-    // Save
-    doc.save(`EventHub_Ticket_${ticketData._id || 'booking'}.pdf`);
+    // Save the PDF
+    doc.save(`Eventara_Ticket_${ticketData._id || 'booking'}.pdf`);
   };
 
   // Web Share API for PDF
@@ -220,21 +220,18 @@ const Checkout = () => {
     }
     doc.setFontSize(13);
     doc.setTextColor('#3b82f6');
-    doc.text('Enjoy your show! Please arrive 15 minutes early. For support, contact EventHub.', 40, y + 30);
-    // Share
+    doc.text('Enjoy your show! Please arrive 15 minutes early. For support, contact Eventara.', 40, y + 30);
+    // Generate PDF blob
     const pdfBlob = doc.output('blob');
-    if (navigator.share) {
-      const file = new File([pdfBlob], `EventHub_Ticket_${ticketData._id || 'booking'}.pdf`, { type: 'application/pdf' });
-      try {
+    try {
+      const file = new File([pdfBlob], `Eventara_Ticket_${ticketData._id || 'booking'}.pdf`, { type: 'application/pdf' });
+      
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
         await navigator.share({
           files: [file],
-          title: 'Your EventHub Ticket',
+          title: 'Your Eventara Ticket',
           text: 'Here is your ticket!'
         });
-      } catch (err) {
-        toast.error('Sharing cancelled or failed.');
-      }
-    } else {
       toast.error('Sharing not supported on this device.');
     }
   };

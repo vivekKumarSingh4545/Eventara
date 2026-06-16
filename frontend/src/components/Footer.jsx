@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center glow-blue">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">EventHub</span>
+              <span className="text-xl font-bold text-white">Eventara</span>
             </div>
             <p className="text-blue-200 text-sm text-center md:text-left">Your ultimate platform for seamless event experiences.</p>
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-blue-200 text-sm border-t border-blue-400/20 pt-8">
-          © {new Date().getFullYear()} EventHub. All rights reserved.
+          © {new Date().getFullYear()} Eventara. All rights reserved.
         </div>
       </div>
     </footer>

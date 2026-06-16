@@ -129,7 +129,7 @@ const Landing = () => {
                             <div className="w-2.5 h-2.5 bg-slate-700 rounded-full" />
                           </div>
 
-                          {/* Screen Content - EventHub App */}
+                          {/* Screen Content - Eventara App */}
                           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
                             {/* Status bar */}
                             <div className="flex justify-between items-center px-8 pt-2 text-white text-xs font-medium">
@@ -432,7 +432,7 @@ const Landing = () => {
           <CardContent className="p-0">
             <h2 className="text-4xl font-bold mb-4 text-white">Ready to create your next extraordinary event?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of organizers who trust EventHub to bring their vision to life
+              Join thousands of organizers who trust Eventara to bring their vision to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {user?.role !== "Attendee" && (

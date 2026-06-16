@@ -38,7 +38,7 @@ const AboutUs = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-3 text-blue-200">About This Website</h2>
           <p className="text-blue-100 mb-2 text-lg">
-            EventHub is a modern event management and ticketing platform designed for hackathons, live shows, and conferences. It allows organizers to create, manage, and promote events, while attendees can discover, book, and enjoy seamless event experiences.
+            Eventara is a modern event management and ticketing platform designed for hackathons, live shows, and conferences. It allows organizers to create, manage, and promote events, while attendees can discover, book, and enjoy seamless event experiences.
           </p>
         </section>
         {/* Tech Stack */}

@@ -58,7 +58,7 @@ export const mail = async (content) => {
 
   try {
     const fromEmail = process.env.BREVO_FROM_EMAIL || process.env.EMAIL || transporter.options.auth.user;
-    const fromName = process.env.BREVO_FROM_NAME || "EventHub";
+    const fromName = process.env.BREVO_FROM_NAME || "Eventara";
 
     const info = await transporter.sendMail({
       from: `"${fromName}" <${fromEmail}>`,
@@ -145,7 +145,7 @@ export const otpFormat = (username , otp) => {
             <p>If you didn't request this, please ignore this email.</p>
 
             <div class="footer">
-            &copy; 2025 EventHub. All rights reserved.
+            &copy; 2025 Eventara. All rights reserved.
             </div>
         </div>
         </body>
@@ -318,7 +318,7 @@ export const eventMarketingFormat = (event) => {
                 <a href="#" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Instagram</a>
               </div>
               <p style="margin: 15px 0 0 0; font-size: 12px; color: #e3f2fd;">
-                &copy; ${year} EventHub. All rights reserved.
+                &copy; ${year} Eventara. All rights reserved.
               </p>
             </td>
           </tr>
