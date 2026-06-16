@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <Link to="/">
             <span className="text-2xl font-bold text-white">
-              <span className="text-blue-500">Event</span>Hub
+              <span className="text-blue-500">Event</span>ara
             </span>
           </Link>
         </div>

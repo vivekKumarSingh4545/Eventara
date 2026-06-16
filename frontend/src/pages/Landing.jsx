@@ -150,7 +150,7 @@ const Landing = () => {
                               <div className="flex items-center justify-between">
                                 <h2 className="text-3xl font-bold">
                                   <span className="text-white">Event</span>
-                                  <span className="text-blue-400">Hub</span>
+                                  <span className="text-blue-400">ara</span>
                                 </h2>
                                 <div className="w-11 h-11 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                                   S

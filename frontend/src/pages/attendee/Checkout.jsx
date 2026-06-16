@@ -145,7 +145,7 @@ const Checkout = () => {
     doc.setTextColor('#3b82f6');
     doc.text('Event', 40, 60);
     doc.setTextColor('#22223b');
-    doc.text('Hub', 115, 60);
+    doc.text('ara', 115, 60);
 
     // Movie title
     doc.setFontSize(20);
@@ -194,7 +194,7 @@ const Checkout = () => {
     doc.setTextColor('#3b82f6');
     doc.text('Event', 40, 60);
     doc.setTextColor('#22223b');
-    doc.text('Hub', 115, 60);
+    doc.text('ara', 115, 60);
     doc.setFontSize(20);
     doc.setTextColor('#22223b');
     doc.text(ticketData.event_title || 'Event', 40, 100);
